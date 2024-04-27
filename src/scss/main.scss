@@ -1,0 +1,120 @@
+@import 'mixins.scss';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  max-width: 1310px;
+  margin: 0 auto;
+  padding: 0 15px;
+  &--small {
+    max-width: 1064px;
+  }
+}
+
+.section {
+  padding: 128px 0;
+  color: var(--mainText-color);
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 30px;
+  }
+  &__title {
+    @include big-title;
+    max-width: 600px;
+    text-align: center;
+    margin: 0 auto 48px;
+  }
+}
+
+.left-column {
+  &__title {
+    max-width: 405px;
+    @include big-title;
+    &--small {
+      @include medium-title;
+      width: 330px;
+    }
+  }
+  &__subtitle {
+    margin-top: 16px;
+    max-width: 330px;
+    @include small-text;
+    opacity: 0.7;
+  }
+  &__link {
+    display: block;
+    margin-top: 16px;
+    @include medium-text;
+    font-weight: 500;
+    color: #2405f2;
+    text-decoration: none;
+    &:after {
+      content: url("../images/base/arrows/blue.svg");
+      display: inline-block;
+      margin-left: 13px;
+      color: #2405f2;
+    }
+  }
+}
+
+@import "blocks/base/header";
+@import "blocks/home/banner";
+@import "blocks/home/how-we-work";
+@import "blocks/home/our-projects";
+@import "blocks/home/features";
+@import "blocks/home/reviews";
+@import "blocks/base/faq";
+@import "blocks/home/home-form";
+@import "blocks/blog/blog";
+@import "blocks/base/contacts";
+@import "blocks/base/footer";
+@import "blocks/about_us/about-us";
+@import "blocks/about_us/who-we-are";
+@import "blocks/base/benefits";
+@import "blocks/about_us/process";
+@import "blocks/about_us/our-mission";
+@import "blocks/base/logos";
+@import "blocks/pricing/price";
+@import "blocks/about_us/our-team";
+@import "blocks/features/description";
+@import "blocks/policy/policy";
+@import "blocks/portfolio/portfolio";
+@import "blocks/contact us/contact-us";
+@import "blocks/blog/blog-page";
+@import "blocks/blog/read-blog";
+@import "blocks/portfolio-page/intro";
+@import "blocks/portfolio-page/about-project";
+
+
+@media (max-width: 1600px){
+  .section {
+    padding: 85px 0;
+  }
+}
+
+@media (max-width: 1365px) {
+  .container {
+    max-width: 990px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .section {
+    padding: 70px 0;
+    &__inner {
+      flex-direction: column;
+    }
+  }
+  .container {
+    max-width: 750px;
+  }
+  .left-column {
+    margin-bottom: 50px;
+  }
+}

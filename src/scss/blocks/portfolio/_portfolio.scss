@@ -1,0 +1,137 @@
+@import "../../mixins";
+
+.portfolio {
+  padding-top: 96px;
+  &__nav {
+    &-list {
+      margin-bottom: 48px;
+      display: flex;
+      justify-content: center;
+      column-gap: 32px;
+      row-gap: 15px;
+      flex-wrap: wrap;
+      list-style-type: none;
+    }
+    &-item {
+      @include medium-text;
+      font-weight: 500;
+      opacity: 0.7;
+      transition: all 0.2s linear;
+      &.active {
+        color: var(--blue-text);
+        opacity: 1;
+      }
+      &:hover {
+        cursor: pointer;
+        color: var(--blue-text);
+        opacity: 1;
+      }
+    }
+  }
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(463px, 623px));
+    gap: 64px 34px;
+    justify-content: center;
+  }
+  &__item {
+    &-img {
+      display: block;
+      max-width: 100%;
+    }
+    &-title {
+      margin: 24px 0 12px;
+      @include medium-title;
+    }
+    &-text {
+      @include small-text;
+      opacity: 0.7;
+      margin-bottom: 24px;
+    }
+    &-link {
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: 500;
+      text-decoration: none;
+      color: var(--mainText-color);
+      &:after {
+        content: url("../images/base/arrows/black.svg");
+        margin-left: 16px;
+      }
+    }
+  }
+}
+
+.our-work {
+  padding: 96px 0;
+  background-color: var(--grey-blue-background);
+  text-align: center;
+  &__subtitle {
+    @include small-text;
+    font-weight: 500;
+    opacity: 0.7;
+  }
+  &__title {
+    margin: 4px 0 24px;
+    @include big-title;
+  }
+  &__text {
+    margin: 0 auto 32px;
+    max-width: 730px;
+    @include small-text;
+    font-weight: 500;
+    opacity: 0.7;
+  }
+  &__links {
+    justify-content: center;
+  }
+}
+
+.call {
+  text-align: center;
+  &__title {
+    max-width: 700px;
+    margin: 0 auto;
+    @include big-title;
+  }
+  &__subtitle {
+    max-width: 560px;
+    margin: 20px auto 40px;
+    @include small-text;
+    opacity: 0.7;
+  }
+  &__button {
+    width: 230px;
+    height: 64px;
+    margin: 0 auto;
+    @include medium-text;
+    font-weight: 600;
+    background-color: var(--yellow);
+    color: var(--mainText-color);
+  }
+}
+
+@media screen and (max-width: 1600px){
+  .our-work {
+    padding: 70px 0;
+  }
+  .portfolio {
+    &__inner {
+      row-gap: 45px;
+    }
+    &__item-title {
+      margin: 16px 0 8px;
+    }
+    &__item-text {
+      margin-bottom: 16px;
+    }
+  }
+}
+
+@media screen and (max-width: 1023px){
+  .portfolio {
+    &__inner {
+      grid-template-columns: minmax(auto, 623px);
+    }
+  }
+}

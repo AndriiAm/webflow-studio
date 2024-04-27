@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600&family=Poppins:wght@400;500;600&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+@@include("html_blocks/base/_header.html")
+<main>
+    <section class="blog-page">
+        <div class="container">
+            <h1 class="blog-page__title">
+                A UX Case Study on Creating a Studious Environment for Students
+            </h1>
+
+            <p class="blog-page__subtitle">
+                Andrew Jonson Posted on 27th January 2021
+            </p>
+
+            <img src="images/blog/blog-background.png" alt="" class="blog-page__img">
+
+            <p class="blog-page__text">
+                Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars
+                had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the
+                spectator on a hillside.
+            </p>
+
+            <a href="" class="blog-page__link">Read more</a>
+        </div>
+    </section>
+
+    @@include("html_blocks/blog/_blog.html")
+    @@include("html_blocks/base/_contacts.html")
+</main>
+@@include("html_blocks/base/_footer.html")
+<script src="https://kit.fontawesome.com/f0af0ccce5.js" crossorigin="anonymous"></script>
+<script src="js/index.bundle.js"></script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+@import "../../mixins";
+
+.footer {
+  &__inner {
+    height: 92px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__copyright {
+    @include small-text;
+    color: var(--mainText-color);
+    font-weight: 500;
+    text-decoration: none;
+  }
+}
+
+@media  screen and (max-width: 1023px) {
+  .footer {
+    &__inner {
+      padding: 10px 15px;
+      height: auto;
+      flex-direction: column-reverse;
+    }
+    &__menu {
+      margin-bottom: 10px;
+      & a {
+        line-height: 40px;
+      }
+    }
+  }
+}
+
+@media  screen and (max-width: 575px) {
+  .footer {
+    &__menu {
+      & li:not(:last-child) {
+        margin-right: 10px;
+        & a {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

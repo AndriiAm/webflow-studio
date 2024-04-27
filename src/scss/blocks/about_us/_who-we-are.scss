@@ -1,0 +1,60 @@
+@import "../../mixins";
+
+.who-we-are {
+  &__wrapper {
+    padding: 80px 109px 80px 79px;
+    background-color: var(--grey-background);
+  }
+  &__subtitle {
+    margin-bottom: 4px;
+    @include small-text;
+    font-weight: 500;
+  }
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  &__block {
+    max-width: 515px;
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+  &__title {
+    @include medium-title;
+    margin-bottom: 16px;
+  }
+  &__text {
+    @include small-text;
+    opacity: 0.7;
+  }
+  &__img {
+    display: block;
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 1365px) {
+  .who-we-are__block {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .who-we-are {
+    &__wrapper {
+      padding: 40px 30px 40px 30px;
+    }
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .who-we-are {
+    &__wrapper {
+      padding: 40px 15px 40px 15px;
+    }
+  }
+}

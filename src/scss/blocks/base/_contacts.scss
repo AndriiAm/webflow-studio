@@ -1,0 +1,135 @@
+@import "../../mixins";
+
+.contacts {
+  color: white;
+  background-color: var(--blue-background);
+  padding-top: 96px;
+  &__inner {
+    display: flex;
+  }
+  &__logo {
+    flex: 1;
+    &-img {
+      display: block;
+    }
+    &-text {
+      max-width: 400px;
+      margin-top: 24px;
+      @include small-text;
+      font-weight: 500;
+      opacity: 0.8;
+    }
+  }
+  &__social {
+    flex: 1;
+    padding-left: 17px;
+  }
+  &__title {
+    @include big-title;
+    margin-top: -15px;
+  }
+  &__text {
+    max-width: 400px;
+    margin-top: 14px;
+    color: #f4f6fc;
+    @include small-text;
+    opacity: 0.8;
+  }
+  &__social-links {
+    margin-top: 26px;
+  }
+}
+
+.social-links {
+  display: flex;
+  column-gap: 28px;
+  &__item {
+    list-style-type: none;
+    line-height: 1;
+    & i {
+      color: white;
+    }
+    &--dark i{
+      color: var(--mainText-color);
+    }
+  }
+}
+
+.contacts-links {
+  width: 40%;
+  display: flex;
+  color: var(--mainText-color);
+  background-color: var(--yellow);
+  padding-top: 17px;
+  padding-left: 37px;
+  &__item {
+    &:nth-child(2) {
+      margin-left: 29px;
+    }
+    &-title {
+      @include medium-text;
+      font-weight: 500;
+    }
+    &-link {
+      color: var(--mainText-color);
+      @include small-text;
+      opacity: 0.8;
+      text-decoration: none;
+    }
+  }
+}
+
+@media screen and (max-width: 1365px) {
+  .contacts {
+    padding-top: 65px;
+    &-links {
+      min-width: 415px;
+      padding-left: 0;
+      justify-content: center;
+    }
+  }
+}
+
+@media screen and  (max-width: 1023px) {
+  .contacts {
+    &-links {
+      margin-top: 20px;
+    }
+  }
+  .social-links {
+    margin-top: 5px;
+    & a {
+      line-height: 40px;
+    }
+  }
+}
+
+@media screen and  (max-width: 575px) {
+  .contacts {
+    padding-top: 50px;
+    &__inner {
+      flex-direction: column;
+    }
+    &__logo-text {
+      margin-top: 20px;
+    }
+    &__social {
+      padding-left: 0;
+      margin-top: 25px;
+    }
+    &__text {
+      margin-top: 5px;
+    }
+    &-links {
+      width: 100%;
+      min-width: auto;
+      margin-top: 25px;
+      padding-left: 30px;
+      flex-direction: column;
+      &__item:nth-child(2) {
+        margin-left: 0;
+      }
+    }
+  }
+}
+

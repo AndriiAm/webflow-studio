@@ -1,0 +1,42 @@
+@import "../../mixins";
+
+.how-we-work {
+  background-color: var(--grey-blue-background);
+}
+
+.algorithm {
+  display: grid;
+  grid-template-columns: repeat(2, 300px);
+  grid-template-rows: repeat(2, auto);
+  gap: 48px 25px;
+  &__logo {
+    display: block;
+    margin-bottom: 16px;
+  }
+  &__title {
+    @include medium-title;
+    margin-bottom: 8px;
+  }
+  &__text {
+    @include small-text;
+  }
+}
+
+@media  screen and (max-width: 1365px) {
+  .algorithm {
+    grid-template-columns: repeat(2, 260px);
+  }
+}
+
+@media  screen and (max-width: 1023px) {
+  .algorithm {
+    grid-template-columns: repeat(2, 260px);
+  }
+}
+
+@media  screen and (max-width: 575px) {
+  .algorithm {
+    grid-template-columns: 300px;
+    gap: 30px;
+  }
+}

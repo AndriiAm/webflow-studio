@@ -1,0 +1,98 @@
+@import "../../mixins";
+
+.our-mission {
+  background-color: var(--light-blue-background);
+  &__block-wrapper {
+    display: flex;
+    justify-content: space-between;
+    &:not(:last-child) {
+      margin-bottom: 96px;
+  }
+  }
+  &__img-wrapper {
+    min-width: 40.23%;
+    & img {
+      display: block;
+      max-width: 100%;
+    }
+  }
+  &__block-text {
+    max-width: 620px;
+    &--even {
+      margin-left: 50px;
+    }
+    &--odd {
+      margin-right: 50px;
+    }
+  }
+  &__subtitle {
+    margin-top: 53px;
+    @include small-text;
+    font-weight: 500;
+  }
+  &__title {
+    margin: 16px 0;
+    @include medium-title;
+  }
+  &__text {
+    @include small-text;
+    opacity: 0.7;
+  }
+
+}
+
+@media screen and (max-width: 1365px) {
+  .our-mission{
+    &__block-wrapper {
+      &:not(:last-child) {
+        margin-bottom: 65px;
+      }
+    }
+    &__title {
+      margin: 10px 0;
+    }
+    &__subtitle {
+      margin-top: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .our-mission {
+    &__block-wrapper {
+      flex-direction: column;
+      justify-content: initial;
+      &:not(:last-child) {
+        margin-bottom: 50px;
+      }
+      &:last-child {
+        flex-direction: column-reverse;
+      }
+    }
+    &__img-wrapper {
+      width: 100%;
+      max-width: 450px;
+      margin-top: 10px;
+    }
+    &__block-text {
+      &--even {
+        margin: 0;
+      }
+      &--odd {
+        margin: 0;
+      }
+    }
+    &__subtitle {
+      margin: 0;
+    }
+    &__title {
+      margin: 5px 0;
+    }
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .our-mission__title {
+    font-size: 27px;
+  }
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600&family=Poppins:wght@400;500;600&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+@@include("html_blocks/base/_header.html")
+<main>
+    <section class="our-work">
+        <div class="container">
+            <p class="our-work__subtitle">
+                What we created
+            </p>
+
+            <h1 class="our-work__title">
+                Our Work Portfolio
+            </h1>
+
+            <p class="our-work__text">
+                We help teams create great digital products by providing them with tools and technology to make the
+                design-to-code process universally accessible.
+            </p>
+
+            <ul class="our-work__links social-links">
+                <li class="social-links__item social-links__item--dark">
+                    <a href="">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                </li>
+
+                <li class="social-links__item social-links__item--dark">
+                    <a href="">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+                </li>
+
+                <li class="social-links__item social-links__item--dark">
+                    <a href="">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </li>
+
+                <li class="social-links__item social-links__item--dark">
+                    <a href="">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    @@include("html_blocks/portfolio/_portfolio.html")
+
+    <section class="section">
+        @@include("html_blocks/base/_call.html")
+    </section>
+
+    @@include("html_blocks/base/_contacts.html")
+</main>
+@@include("html_blocks/base/_footer.html")
+<script src="https://kit.fontawesome.com/f0af0ccce5.js" crossorigin="anonymous"></script>
+<script src="js/index.bundle.js"></script>
+</body>
+</html>

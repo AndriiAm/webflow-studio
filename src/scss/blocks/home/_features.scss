@@ -1,0 +1,70 @@
+@import "../../mixins";
+
+.features {
+  background-color: var(--grey-blue-background);
+  &__subtitle {
+    @include small-text;
+    text-align: center;
+    font-weight: 500;
+  }
+  &__title {
+    margin: 12px auto 47px;
+    max-width: 630px;
+    text-align: center;
+    @include big-title;
+    font-weight: 600;
+  }
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(auto, 405px));
+  grid-auto-rows: minmax(316px, auto);
+  justify-content: center;
+  gap: 24px 32px;
+}
+
+.card {
+  padding: 48px 32px 48px 48px;
+  background-color: var(--white-background);
+  &--benefits {
+    background-color: var(--grey-blue-background);
+  }
+  &__logo {
+    display: block;
+    margin-bottom: 22px;
+  }
+  &__title {
+    margin-bottom: 8px;
+    @include small-title;
+  }
+  &__text {
+    @include small-text
+  }
+}
+
+@media  screen and (max-width: 1440px) {
+  .cards {
+    grid-auto-rows: minmax(266px, auto);
+  }
+  .card {
+    padding: 32px 24px 32px 32px;
+    &__logo {
+      margin-bottom: 17px;
+    }
+    &__title {
+      margin-bottom: 5px;
+    }
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .card {
+    padding: 32px 24px;
+  }
+  .features {
+    &__title {
+      font-size: 35px;
+    }
+  }
+}

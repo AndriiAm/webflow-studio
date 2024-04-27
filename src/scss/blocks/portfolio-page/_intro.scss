@@ -1,0 +1,47 @@
+@import "../../mixins";
+
+.project-intro {
+  &__subtitle {
+    @include small-title;
+    opacity: 0.8;
+  }
+  &__title {
+    max-width: 640px;
+    margin: 12px 0 16px;
+    @include big-title;
+  }
+  &__text {
+    max-width: 815px;
+    @include small-text;
+    opacity: 0.7;
+  }
+  &__img {
+    max-width: 100%;
+    margin: 48px 0;
+    display: block;
+  }
+  &__info {
+    &-wrapper {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px 40px;
+
+    }
+    &-subtitle {
+      margin-bottom: 4px;
+      @include small-text;
+      font-weight: 500;
+      opacity: 0.8;
+    }
+    &-title {
+      @include small-title;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .project-intro__img {
+    margin: 35px 0;
+  }
+}

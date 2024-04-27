@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact us</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+@@include("html_blocks/base/_header.html")
+<main>
+    <section class="section contacts-us">
+        <div class="container">
+            <h1 class="contact-us__title">
+                Contact Us
+            </h1>
+
+            <p class="contact-us__subtitle">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.
+            </p>
+
+            <form action="/" class="contact-us__form">
+                <label>
+                    Name
+                    <input type="text" id="contact-us__name" placeholder="Enter your name">
+                </label>
+
+                <label for="contact-us__email">
+                    Email
+                    <input type="text" id="contact-us__email" placeholder="Enter your Email">
+                </label>
+
+                <label for="contact-us__subject">
+                    Subject
+                    <input type="text" id="contact-us__subject" placeholder="Provide context">
+                </label>
+
+                <label for="contact-us__subject--select">
+                    Subject
+                    <input type="text" id="contact-us__subject--select" placeholder="Select Subject">
+                </label>
+
+                <label for="contact-us__message" class="contact-us__label-textarea">
+                    Message
+                    <textarea id="contact-us__message" placeholder="Write your question here"></textarea>
+                </label>
+
+                <button class="contact-us__button button">
+                    Send Message
+                </button>
+            </form>
+        </div>
+    </section>
+    @@include("html_blocks/base/_contacts.html")
+</main>
+@@include("html_blocks/base/_footer.html")
+<script src="https://kit.fontawesome.com/f0af0ccce5.js" crossorigin="anonymous"></script>
+<script src="js/index.bundle.js"></script>
+</body>
+</html>
