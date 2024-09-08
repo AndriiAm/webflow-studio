@@ -1,5 +1,5 @@
 # Multi-page website for Webflow Studio
-It's a responsive multi-page website (1920px to 360px) developed for a Webflow studio, based on this layout:
+It's a responsive multi-page website (1920px to 360px) developed for a Webflow studio, based on this layout:  
 [Design Layout](https://www.figma.com/design/0Mt2UQG6AuXtRhZ3eeGmql/Untitled?node-id=0-1&node-type=CANVAS&t=WNmPPj00UOuKXUqa-0)
 
 **Stack:**  
